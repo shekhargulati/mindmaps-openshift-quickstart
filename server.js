@@ -23,7 +23,7 @@ require('http').createServer(function (request, response) {
       }
     });
   });
-}).listen(8080);
+}).listen(process.env.OPENSHIFT_INTERNAL_IP,8080);
 
 sys.puts("> node-static is listening on http://127.0.0.1:8080");
 sys.puts("> and serving path: /" + path);
