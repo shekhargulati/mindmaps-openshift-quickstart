@@ -11,9 +11,6 @@
   "bugs": {
     "url": "http://github.com/drichard/mindmaps/issues"
   },
-  "scripts": {
-    "postinstall" : "npm install -g jake"
-  },
   "license": {
     "type": "AGPL",
     "url": "http://github.com/drichard/mindmaps/raw/master/LICENSE"
@@ -23,6 +20,7 @@
   },
   "dependencies": {
     "node-static": ">=0.5.9",
-    "uglify-js": ">=1.2.5"
+    "uglify-js": ">=1.2.5",
+    "jake":">=0.3.4"
   }
 }
