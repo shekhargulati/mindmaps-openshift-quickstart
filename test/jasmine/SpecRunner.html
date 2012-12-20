@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="shortcut icon" type="image/png" href="jasmine-1.1.0/jasmine_favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="jasmine-1.1.0/jasmine.css">
+  <script type="text/javascript" src="jasmine-1.1.0/jasmine.js"></script>
+  <script type="text/javascript" src="jasmine-1.1.0/jasmine-html.js"></script>
+
+ 
+  
+    <!-- include spec files here... -->
+  <script type="text/javascript" src="SpecHelper.js"></script>
+  <script type="text/javascript" src="PointSpec.js"></script>
+  <script type="text/javascript" src="NodeMapSpec.js"></script>
+  <script type="text/javascript" src="NodeSpec.js"></script>
+  <script type="text/javascript" src="MindMapSpec.js"></script>
+  <script type="text/javascript" src="DocumentSpec.js"></script>
+  <script type="text/javascript" src="UndoManagerSpec.js"></script>
+  <script type="text/javascript" src="CommandSpec.js"></script>
+  <script type="text/javascript" src="StorageSpec.js"></script>
+  <script type="text/javascript" src="IntegrationTestSpec.js"></script>
+  
+   <!-- include source files here... -->
+   <!-- lib -->
+   <script src="../../src/js/libs/events.js"></script>
+   
+   <!-- own -->
+  <script type="text/javascript" src="../../src/js/Util.js"></script>
+  <script type="text/javascript" src="../../src/js/Point.js"></script>
+  <script type="text/javascript" src="../../src/js/Node.js"></script>
+  <script type="text/javascript" src="../../src/js/NodeMap.js"></script>
+  <script type="text/javascript" src="../../src/js/MindMap.js"></script>
+  <script type="text/javascript" src="../../src/js/Document.js"></script>
+  <script type="text/javascript" src="../../src/js/UndoManager.js"></script>
+  <script type="text/javascript" src="../../src/js/Command.js"></script>
+  <script type="text/javascript" src="../../src/js/CommandRegistry.js"></script>
+  <script type="text/javascript" src="../../src/js/Storage.js"></script>
+  
+  
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+
+      jasmineEnv.addReporter(trivialReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>
