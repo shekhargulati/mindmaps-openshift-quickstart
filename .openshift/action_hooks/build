@@ -4,6 +4,7 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 cd $OPENSHIFT_DATA_DIR
+rm -rf *
 mkdir installation
 git clone git://github.com/mde/jake.git
 cd jake
