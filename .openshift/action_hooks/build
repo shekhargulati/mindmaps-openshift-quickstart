@@ -3,3 +3,8 @@
 # available.  Otherwise it will execute while your application is stopped
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
+cd $OPENSHIFT_DATA_DIR
+mkdir installation
+git clone git://github.com/mde/jake.git
+cd jake
+make && make install PREFIX=$OPENSHIFT_DATA_DIR/installation
